@@ -15,18 +15,18 @@ function articlesList() {
   }).catch((error) => {
     setError("oh no, something is off...", error);
   });
-}
 
-return (
-  <main className="artcile-list">
-    <h2> All Articles </h2>
-    <ul className="article-grid">
-      {articles.map((article) => (
-        <li key={article.article.id}>
-          <ArticleCard article={article} />
-        </li>
-      ))}
-    </ul>
-  </main>
-);
+  return (
+    <main className="artcile-list">
+      <h2> All Articles </h2>
+      <ul className="article-grid">
+        {articles.map((article) => (
+          <li key={article.article.id}>
+            <ArticleCard article={article} />
+          </li>
+        ))}
+      </ul>
+    </main>
+  );
+}
 export default articlesList;

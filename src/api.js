@@ -19,3 +19,5 @@ function getTopics() {
     })
     .then(({ articles }) => articles);
 }
+module.exports = getArticles;
+module.exports = getTopics;
