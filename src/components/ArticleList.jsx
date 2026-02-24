@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getArticles } from "../api/api";
+import { getArticles } from "../api";
 import ArticleCard from "./ArticleCard";
 
 function ArticleList() {
@@ -15,13 +15,10 @@ function ArticleList() {
         setIsLoading(false);
       })
       .catch((err) => {
-        setError("oh no, something is off...");
+        setError("oh no something is off...");
         setIsLoading(false);
       });
   }, []);
-
-  if (isLoading) return <p>Loading articles...</p>;
-  if (error) return <p>{error}</p>;
 
   return (
     <main className="article-list">

@@ -6,3 +6,5 @@ const NavBar = () => {
   );
 };
 export default NavBar;
+
+// do I still need this?
