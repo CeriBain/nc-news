@@ -1,8 +1,8 @@
-const baseProjectUrl = " https://back-end-nc-news-imbm.onrender.com/api/";
+const baseProjectUrl = "https://back-end-nc-news-imbm.onrender.com/api";
 
-function getArticles(topics, sort_by, order) {
+export function getArticles(topic, sort_by, order) {
   const params = new URLSearchParams();
-  if (topics) params.append("topics", topics);
+  if (topic) params.append("topic", topic);
   if (sort_by) params.append("sort_by", sort_by);
   if (order) params.append("order", order);
 
@@ -12,12 +12,10 @@ function getArticles(topics, sort_by, order) {
     })
     .then(({ articles }) => articles);
 }
-function getTopics() {
+export function getTopics() {
   return fetch(`${baseProjectUrl}/topics`)
     .then((res) => {
       return res.json();
     })
-    .then(({ articles }) => articles);
+    .then(({ topics }) => topics);
 }
-module.exports = getArticles;
-module.exports = getTopics;

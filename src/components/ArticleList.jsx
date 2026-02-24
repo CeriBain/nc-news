@@ -1,27 +1,34 @@
 import { useState, useEffect } from "react";
-import { getArticles } from "../api";
-import { ArticleCard } from "../components/ArticleCard";
+import { getArticles } from "../api/api";
+import ArticleCard from "./ArticleCard";
 
-function articlesList() {
+function ArticleList() {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     setIsLoading(true);
-    getArticles().then(articleBody);
-    setArticles(articleBody);
-    setIsLoading(false);
-  }).catch((error) => {
-    setError("oh no, something is off...", error);
-  });
+    getArticles()
+      .then((articlesData) => {
+        setArticles(articlesData);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        setError("oh no, something is off...");
+        setIsLoading(false);
+      });
+  }, []);
+
+  if (isLoading) return <p>Loading articles...</p>;
+  if (error) return <p>{error}</p>;
 
   return (
-    <main className="artcile-list">
-      <h2> All Articles </h2>
+    <main className="article-list">
+      <h2>All Articles</h2>
       <ul className="article-grid">
         {articles.map((article) => (
-          <li key={article.article.id}>
+          <li key={article.article_id}>
             <ArticleCard article={article} />
           </li>
         ))}
@@ -29,4 +36,5 @@ function articlesList() {
     </main>
   );
 }
-export default articlesList;
+
+export default ArticleList;
