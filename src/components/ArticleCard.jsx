@@ -6,20 +6,20 @@ function ArticleCard({ article }) {
   return (
     <article className="article-card">
       <img
-        className="article-card__img"
+        className="article-card-img"
         src={article.article_img_url}
         alt={article.title}
       />
-      <div className="article-card__body">
-        <span className="article-card__topic">{article.topic}</span>
+      <div className="article-card-body">
+        <span className="article-card-topic">{article.topic}</span>
         <Link to={`/articles/${article.article_id}`}>
-          <h3 className="article-card__title">{article.title}</h3>
+          <h3 className="article-card-title">{article.title}</h3>
         </Link>
-        <p className="article-card__meta">
+        <p className="article-card-author">
           by {article.author}
           {date}
         </p>
-        <div className="article-card__stats">
+        <div className="article-card-vote-comment">
           <span> Thumb {article.votes}</span>
           <span> Comment {article.comment_count}</span>
         </div>
