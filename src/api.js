@@ -19,3 +19,6 @@ export function getTopics() {
     })
     .then(({ topics }) => topics);
 }
+
+// get article_by_id same way 
+// new component for single article - follow same as other
