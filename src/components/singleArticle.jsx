@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getArticleById } from "../api/api";
+import { getArticleById } from "../api";
 
 function SingleArticle() {
   const { article_id } = useParams();

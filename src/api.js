@@ -19,6 +19,12 @@ export function getTopics() {
     })
     .then(({ topics }) => topics);
 }
-
-// get article_by_id same way 
+export function getArticleById(article_id) {
+  return fetch(`${baseProjectUrl}/articles/${article_id}`)
+    .then((res) => {
+      return res.json();
+    })
+    .then(({ article }) => article);
+}
+// get article_by_id same way
 // new component for single article - follow same as other
