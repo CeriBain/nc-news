@@ -26,8 +26,8 @@ export function getArticleById(article_id) {
     })
     .then(({ article }) => article);
 }
-export function getCommentByArticleId(article_id) {
-  return fetch(`${baseProjectUrl}/articles/${article_Id}/comments`)
+export function getCommentsByArticleId(article_id) {
+  return fetch(`${baseProjectUrl}/articles/${article_id}/comments`)
     .then((res) => {
       return res.json();
     })
