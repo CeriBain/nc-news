@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { getArticles } from "../api";
 import ArticleCard from "./ArticleCard";
+import { Link } from "react-router";
 
 function ArticleList() {
   const [articles, setArticles] = useState([]);
@@ -26,7 +27,9 @@ function ArticleList() {
       <ul className="article-grid">
         {articles.map((article) => (
           <li key={article.article_id}>
-            <ArticleCard article={article} />
+            <Link to={`/articles/${article.article_id}`}>
+              <ArticleCard article={article} />
+            </Link>
           </li>
         ))}
       </ul>

@@ -12,9 +12,9 @@ function ArticleCard({ article }) {
       />
       <div className="article-card-body">
         <span className="article-card-topic">{article.topic}</span>
-        <Link to={`/articles/${article.article_id}`}>
-          <h3 className="article-card-title">{article.title}</h3>
-        </Link>
+
+        <h3 className="article-card-title">{article.title}</h3>
+
         <p className="article-card-author">
           by {article.author}
           {date}

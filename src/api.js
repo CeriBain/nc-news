@@ -31,7 +31,7 @@ export function getCommentsByArticleId(article_id) {
     .then((res) => {
       return res.json();
     })
-    .then(({ comment }) => comment);
+    .then(({ comments }) => comments);
 }
 
 // get article_by_id same way

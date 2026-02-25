@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { getCommentsByArticleId } from "../api";
-import ArticleCard from "./ArticleCard";
+import CommentCard from "./CommentCard";
 
 function CommentList({ article_id }) {
   const [comments, setComments] = useState([]);
@@ -9,24 +9,22 @@ function CommentList({ article_id }) {
 
   useEffect(() => {
     setIsLoading(true);
-    getCommentsByArticleId()
+    getCommentsByArticleId(article_id)
       .then((commentsData) => {
         setComments(commentsData);
         setIsLoading(false);
       })
       .catch((err) => {
         setError("oh no something is off here...");
-        setCommentList(false);
+        setComments([]);
       });
   }, [article_id]);
 
-  if (comments.length === 0) return <p> No comments yet </p>;
+  //commets [{},{},{}]
 
   return (
     <main className="comments-section">
-      <h3> Comments ({comments.length}) </h3>
       <ul className="coments-list">
-        {" "}
         {comments.map((comment) => (
           <li key={comment.comment_id}>
             <CommentCard comment={comment} />
