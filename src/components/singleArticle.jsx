@@ -24,17 +24,13 @@ function SingleArticle() {
   if (isLoading) return <p>Loading article...</p>;
   if (error) return <p>{error}</p>;
 
-  const date = new Date(article.created_at).toLocaleDateString("en-GB", {
-    day: "numeric",
-    month: "short",
-    year: "numeric",
-  });
+  const date = new Date(article.created_at).toString("en-GB", {});
 
   return (
     <main className="single-article">
-      <span className="single-article__topic">{article.topic}</span>
-      <h2 className="single-article__title">{article.title}</h2>
-      <p className="single-article__meta">
+      <span className="single-article-topic">{article.topic}</span>
+      <h2 className="single-article-title">{article.title}</h2>
+      <p className="single-article-meta">
         by {article.author} • {date}
       </p>
       <img

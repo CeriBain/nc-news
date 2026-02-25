@@ -4,3 +4,52 @@
   padding: 2rem;
   text-align: center;
 }
+
+/* single article css example */
+
+/* .single-article {
+  max-width: 700px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.single-article__topic {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #666;
+  font-weight: 600;
+}
+
+.single-article__title {
+  font-size: 1.6rem;
+  margin: 8px 0;
+  line-height: 1.3;
+}
+
+.single-article__meta {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 16px;
+}
+
+.single-article__img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.single-article__body {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.single-article__stats {
+  display: flex;
+  gap: 14px;
+  font-size: 0.9rem;
+  color: #666;
+  padding: 12px 0;
+  border-top: 1px solid #eee;
+} */

@@ -26,5 +26,13 @@ export function getArticleById(article_id) {
     })
     .then(({ article }) => article);
 }
+export function getCommentByArticleId(article_id) {
+  return fetch(`${baseProjectUrl}/articles/${article_Id}/comments`)
+    .then((res) => {
+      return res.json();
+    })
+    .then(({ comment }) => comment);
+}
+
 // get article_by_id same way
 // new component for single article - follow same as other
