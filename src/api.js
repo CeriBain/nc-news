@@ -45,4 +45,14 @@ export function postComment(article_id, username, body) {
     })
     .then(({ comment }) => comment);
 }
-
+export function patchArticleVotes(article_id, inc_votes) {
+  return fetch(`${baseProjectUrl}/articles/${article_id}`, {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ inc_votes }),
+  })
+    .then((res) => {
+      return res.json();
+    })
+    .then(({ article }) => article);
+}

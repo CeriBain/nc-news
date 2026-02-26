@@ -18,6 +18,7 @@ function CommentList({ article_id }) {
       .catch((err) => {
         setError("oh no something is off here...");
         setComments([]);
+        setIsLoading(false);
       });
   }, [article_id]);
 
