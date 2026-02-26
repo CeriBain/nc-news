@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { getCommentsByArticleId } from "../api";
 import CommentCard from "./CommentCard";
+import AddComment from "./AddComment";
 
 function CommentList({ article_id }) {
   const [comments, setComments] = useState([]);
@@ -20,17 +21,20 @@ function CommentList({ article_id }) {
       });
   }, [article_id]);
 
-  //commets [{},{},{}]
-
   return (
     <main className="comments-section">
-      <ul className="comments-list">
-        {comments.map((comment) => (
-          <li key={comment.comment_id}>
-            <CommentCard comment={comment} />
-          </li>
-        ))}
-      </ul>
+      <AddComment article_id={article_id} setComments={setComments} />
+      {comments.length === 0 ? (
+        <p> No comments yet </p>
+      ) : (
+        <ul className="comments-list">
+          {comments.map((comment) => (
+            <li key={comment.comment_id}>
+              <CommentCard comment={comment} />
+            </li>
+          ))}
+        </ul>
+      )}
     </main>
   );
 }

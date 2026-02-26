@@ -1,19 +1,24 @@
 import { useState } from "react";
 import { postComment } from "../api";
 
-function AddComment() {
+function AddComment({ article_id, setComments }) {
+  // setComments updates CommentLists state by it being a passed down function as prop
   const [body, setBody] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState(null);
-  const user = "hardcodeusername";
+  const user = "tickle122";
 
   function submitComment(e) {
+    e.preventDefault();
+    //stops page refreshing
     setError(null);
     setSubmitting(true);
     postComment(article_id, user, body)
       .then((newComment) => {
-        postComment((current) => [newComment, ...current]);
+        setComments((current) => [newComment, ...current]);
+        // adds to top of my comment array, spreading the rest out
         setBody("");
+        //clears text area by resetting state
         setSubmitting(false);
       })
       .catch((err) => {

@@ -22,7 +22,6 @@ function SingleArticle() {
       });
   }, [article_id]);
 
-  //const date = new Date(article.created_at).toString("en-GB", {});
   console.log(article);
   if (isLoading === false) {
     return (
