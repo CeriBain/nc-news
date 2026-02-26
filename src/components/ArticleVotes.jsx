@@ -6,10 +6,10 @@ function Voting({ article_id, votes }) {
   const [error, setError] = useState(null);
 
   function changeVote(inc_votes) {
-    setVoteChanges((currentVote) => currentVote + inc_votes);
+    setVoteChanges((currentVote) => currentVote + inc_votes); //immediate rendering (optimistic)
     setError(null);
     patchArticleVotes(article_id, inc_votes).catch((err) => {
-      setVoteIncrement((currentVote) => currentVote - inc_votes);
+      setVoteIncrement((currentVote) => currentVote - inc_votes); // if the API call fails
       setError("failed, try again");
     });
   }

@@ -22,7 +22,7 @@ function ArticleList() {
   }, []);
 
   return (
-    <main className="article-list">
+    <div className="article-list">
       <h2>All Articles</h2>
       <ul className="article-grid">
         {articles.map((article) => (
@@ -33,7 +33,7 @@ function ArticleList() {
           </li>
         ))}
       </ul>
-    </main>
+    </div>
   );
 }
 

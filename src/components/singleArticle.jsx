@@ -23,7 +23,6 @@ function SingleArticle() {
       });
   }, [article_id]);
 
-  console.log(article);
   if (isLoading === false) {
     return (
       <main className="single-article">
@@ -41,6 +40,7 @@ function SingleArticle() {
         <p className="single-article-body">{article.body}</p>
         <div className="single-article-stats">
           <VoteControls article_id={article.article_id} votes={article.votes} />
+
           <span> Comment {article.comment_count}</span>
         </div>
         <CommentList article_id={article_id} />
