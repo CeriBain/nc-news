@@ -6,7 +6,7 @@ import SingleArticle from "./components/singleArticle";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter> different views without full page reloads/
       <Header />
       <Routes>
         <Route path="/" element={<ArticleList />} />

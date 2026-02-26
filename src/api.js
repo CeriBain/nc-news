@@ -34,5 +34,15 @@ export function getCommentsByArticleId(article_id) {
     .then(({ comments }) => comments);
 }
 
-// get article_by_id same way
-// new component for single article - follow same as other
+export function postComment(article_id, username, body) {
+  return fetch(`${baseProjectUrl}/articles/${article_id}/comments`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ username, body }),
+  })
+    .then((res) => {
+      return res.json();
+    })
+    .then(({ comment }) => comment);
+}
+

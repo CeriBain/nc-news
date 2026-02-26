@@ -24,7 +24,7 @@ function CommentList({ article_id }) {
 
   return (
     <main className="comments-section">
-      <ul className="coments-list">
+      <ul className="comments-list">
         {comments.map((comment) => (
           <li key={comment.comment_id}>
             <CommentCard comment={comment} />

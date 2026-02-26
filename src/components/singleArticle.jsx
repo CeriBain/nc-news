@@ -41,7 +41,7 @@ function SingleArticle() {
         <p className="single-article-body">{article.body}</p>
         <div className="single-article-stats">
           <span> Thumb {article.votes}</span>
-          <span> comment {article.comment_count}</span>
+          <span> Comment {article.comment_count}</span>
         </div>
         <CommentList article_id={article_id} />
       </main>
