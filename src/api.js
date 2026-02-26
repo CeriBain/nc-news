@@ -47,12 +47,15 @@ export function postComment(article_id, username, body) {
 }
 export function patchArticleVotes(article_id, inc_votes) {
   return fetch(`${baseProjectUrl}/articles/${article_id}`, {
-    method: "PATCH",
+    method: "PATCH", // updating, not getting 
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ inc_votes }),
+    body: JSON.stringify({ inc_votes }), // converts inc_votes from an object to a string
   })
     .then((res) => {
-      return res.json();
+      return res.json(); // converts response back to object
     })
-    .then(({ article }) => article);
+    .then(({ article }) => article); // destructures just the article object
 }
+
+
+
