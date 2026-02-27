@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { getArticles } from "../api";
 import ArticleCard from "./ArticleCard";
 import { Link } from "react-router";
+import { useParams } from "react-router-dom";
 
 function ArticleList() {
   const { topic } = useParams();

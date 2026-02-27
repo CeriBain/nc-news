@@ -3,21 +3,21 @@ import { Link } from "react-router-dom";
 import { getTopics } from "../api";
 
 function Nav() {
-  const [getTopics, setGetTopics] = useState([]);
+  const [topics, setTopics] = useState([]);
 
   useEffect(() => {
     getTopics().then((topicResponse) => {
-      setGetTopics(topicResponse);
+      setTopics(topicResponse);
     });
   }, []);
   return (
     <nav className="topics-navbar">
       <Link to="/"> All topics </Link>
-      {topics.map(() => {
-        <link key={topic.slug} to={`/topics/${topic.slug}`}>
+      {topics.map((topic) => (
+        <Link key={topic.slug} to={`/topics/${topic.slug}`}>
           {topic.slug}
-        </link>;
-      })}
+        </Link>
+      ))}
     </nav>
   );
 }
