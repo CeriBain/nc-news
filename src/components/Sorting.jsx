@@ -8,7 +8,7 @@ function Sorting({ sortBy, order, setSortBy, setOrder }) {
         onChange={(e) => setSortBy(e.target.value)}
       >
         <option value="created-at"> Date </option>
-        <option value="comment-count"> Comments </option>
+        <option value="comment_count"> Comments </option>
         <option value="votes"> </option>
       </select>
       <label htmlFor="order"> Order </label>
