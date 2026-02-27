@@ -1,6 +1,26 @@
-function CommentCard({ comment }) {
-  const date = new Date(comment.created_at).toString("Date");
+import { useState } from "react";
+import { deleteComment } from "../api";
 
+function CommentCard({ comment, loggedInUser, setComments }) {
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [error, setError] = useState(null);
+
+  function handleDelete() {
+    setIsDeleting(true);
+    setError(null);
+    deleteComment(comment.comment_id)
+      .then(() => {
+        setComments((current) =>
+          current.filter((c) => c.comment_id !== comment.comment_id)
+        );
+      })
+      .catch((err) => {
+        setError("Didn't delete, please try again");
+        setIsDeleting(false);
+      });
+  }
+
+  const date = new Date(comment.created_at).toString("Date");
   return (
     <article className="comment-card">
       <div className="comment-card">
