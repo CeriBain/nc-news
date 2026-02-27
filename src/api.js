@@ -48,12 +48,17 @@ export function postComment(article_id, username, body) {
 }
 export function patchArticleVotes(article_id, inc_votes) {
   return fetch(`${baseProjectUrl}/articles/${article_id}`, {
-    method: "PATCH", // updating, not getting
+    method: "PATCH", // updating
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ inc_votes }), // converts inc_votes from an object to a string
   })
     .then((res) => {
-      return res.json(); // converts response back to object
+      return res.json();
     })
-    .then(({ article }) => article); // destructures just the article object
+    .then(({ article }) => article);
+}
+export function deleteComment(comment_id) {
+  return fetch(`${baseProjectUrl}/comments/${comment_id}`, {
+    method: "DELETE",
+  });
 }
