@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { getCommentsByArticleId } from "../api";
 import CommentCard from "./CommentCard";
 import AddComment from "./AddComment";
+const loggedInUser = "tickle122";
 
 function CommentList({ article_id }) {
   const [comments, setComments] = useState([]);
@@ -31,7 +32,11 @@ function CommentList({ article_id }) {
         <ul className="comments-list">
           {comments.map((comment) => (
             <li key={comment.comment_id}>
-              <CommentCard comment={comment} />
+              <CommentCard
+                comment={comment}
+                loggedInUser={loggedInUser}
+                setComments={setComments}
+              />
             </li>
           ))}
         </ul>

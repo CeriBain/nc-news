@@ -29,6 +29,11 @@ function CommentCard({ comment, loggedInUser, setComments }) {
       </div>
       <span className="comment-card-body">{comment.body} </span>
       <span className="comment-card-votes"> {comment.votes} </span>
+      {comment.author === loggedInUser && (
+        <button onClick={handleDelete}>
+          {isDeleting ? "Deleting..." : "Delete"}
+        </button>
+      )}
     </article>
   );
 }

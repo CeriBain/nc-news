@@ -9,7 +9,7 @@ function Voting({ article_id, votes }) {
     setVoteChanges((currentVote) => currentVote + inc_votes); //immediate rendering (optimistic)
     setError(null);
     patchArticleVotes(article_id, inc_votes).catch((err) => {
-      setVoteIncrement((currentVote) => currentVote - inc_votes); // if the API call fails
+      setVoteChanges((currentVote) => currentVote - inc_votes); // if the API call fails
       setError("failed, try again");
     });
   }
