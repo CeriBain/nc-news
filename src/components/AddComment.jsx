@@ -18,7 +18,7 @@ function AddComment({ article_id, setComments }) {
         setComments((current) => [newComment, ...current]);
         // adds to top of my comment array, spreading the rest out
         setBody("");
-        //clears text area by resetting state
+
         setSubmitting(false);
       })
       .catch((err) => {

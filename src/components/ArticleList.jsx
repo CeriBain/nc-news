@@ -4,13 +4,14 @@ import ArticleCard from "./ArticleCard";
 import { Link } from "react-router";
 
 function ArticleList() {
+  const { topic } = useParams();
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     setIsLoading(true);
-    getArticles()
+    getArticles(topic)
       .then((articlesData) => {
         setArticles(articlesData);
         setIsLoading(false);
@@ -19,11 +20,11 @@ function ArticleList() {
         setError("oh no something is off...");
         setIsLoading(false);
       });
-  }, []);
+  }, [topic]);
 
   return (
     <div className="article-list">
-      <h2>All Articles</h2>
+      <h2>{topic ? topic : "All"} Articles </h2>
       <ul className="article-grid">
         {articles.map((article) => (
           <li key={article.article_id}>

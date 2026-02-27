@@ -25,7 +25,7 @@ function CommentCard({ comment, loggedInUser, setComments }) {
     <article className="comment-card">
       <div className="comment-card">
         <span className="comment-card-author">{comment.author}</span>
-        <span className="comment-crad-date">{date} </span>
+        <span className="comment-card-date">{date} </span>
       </div>
       <span className="comment-card-body">{comment.body} </span>
       <span className="comment-card-votes"> {comment.votes} </span>
