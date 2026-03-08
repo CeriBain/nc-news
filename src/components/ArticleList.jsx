@@ -12,7 +12,7 @@ function ArticleList() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const sortBy = searchParams.get("sort-by") || "created-at";
+  const sortBy = searchParams.get("sort_by") || "created_at";
   const order = searchParams.get("order") || "desc";
 
   function setSortBy(newSortBy) {
@@ -24,7 +24,7 @@ function ArticleList() {
 
   useEffect(() => {
     setIsLoading(true);
-    getArticles(topic)
+    getArticles(topic, sortBy, order)
       .then((articlesData) => {
         setArticles(articlesData);
         setIsLoading(false);
