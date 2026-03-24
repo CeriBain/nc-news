@@ -1,16 +1,82 @@
-# React + Vite
+# NC News — Front-End
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based news app where users can browse articles by topic, vote on content, and join the discussion through comments. 
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 [Hosted version](https://<your-hosted-url>.netlify.app)   update this!!!
 
-## React Compiler
+## Built With
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React** — UI library
+- **Vite** — build tool & dev server
+- **Axios** — HTTP client                   Have I used this???
+- **React Router** — client-side routing
+- **CSS** — custom styling
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- View a list of articles with sorting and topic filtering
+- Read individual articles with full comment threads
+- Post and delete comments
+- Upvote and downvote articles
+- Responsive, accessible layout
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18+)
+
+### Installation
+
+1. Clone the repo:
+
+```bash
+git clone https://github.com/<your-username>/nc-news.git
+cd nc-news
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the dev server:
+
+```bash
+npm run dev
+```
+
+The app will be available at `http://localhost:5173`.
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── AddComment.jsx
+│   ├── ArticleCard.jsx
+│   ├── ArticleList.jsx
+│   ├── ArticleVotes.jsx
+│   ├── CommentCard.jsx
+│   ├── CommentList.jsx
+│   ├── Header.jsx
+│   ├── Nav.jsx
+│   ├── SingleArticle.jsx
+│   └── Sorting.jsx
+├── api.js            # API request functions
+├── App.jsx           # Root component & routes
+├── App.css
+├── index.css
+└── main.jsx          # Entry point
+```
+
+## Back-End Repo
+
+This project consumes the [Northcoders News API](https://github.com/<your-username>/nc-news-api), a RESTful API built with Express and PostgreSQL.
+
+---
+
+This portfolio project was created as part of a Digital Skills Bootcamp in Software Engineering provided by [Northcoders](https://northcoders.com).
