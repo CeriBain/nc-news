@@ -1,18 +1,18 @@
-# NC News — Front-End
+# NC News: Front-End
 
 A React-based news app where users can browse articles by topic, vote on content, and join the discussion through comments. 
 
 ## Live Demo
 
-🔗 [Hosted version](https://<your-hosted-url>.netlify.app)   update this!!!
+🔗 [Hosted version](https://<your-hosted-url>.netlify.app)   (update this!!!)
 
 ## Built With
 
-- **React** — UI library
-- **Vite** — build tool & dev server
-- **Axios** — HTTP client                   Have I used this???
+- **React** - UI library
+- **Vite** - build tool & dev server
+- **Axios** - HTTP client                   (Have I used this???)
 - **React Router** — client-side routing
-- **CSS** — custom styling
+- **CSS** - custom styling
 
 ## Features
 
