@@ -33,7 +33,7 @@ A React-based news app where users can browse articles by topic, vote on content
 1. Clone the repo:
 
 ```bash
-git clone https://github.com/<your-username>/nc-news.git
+git clone https://github.com/CeriBain/nc-news.git
 cd nc-news
 ```
 
