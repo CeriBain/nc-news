@@ -10,7 +10,8 @@
 }
 
 body {
-  font-family: "Segoe UI", -apple-system, sans-serif;
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   background: var(--bg);
   color: var(--text);
   line-height: 1.5;
@@ -26,9 +27,10 @@ img {
   display: block;
   max-width: 100%;
 }
-/* ===== Header ===== */
+
+/* Header style */
 header {
-  background: #1a1a2e;
+  background: #cf683c;
   padding: 0.75rem 1.5rem;
   position: sticky;
   top: 0;
@@ -36,13 +38,13 @@ header {
 }
 .title {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 800;
   max-width: var(--max-width);
   margin: 0 auto;
 }
 
-/* ===== Nav ===== */
+/* Nav bar */
 nav {
   display: flex;
   flex-wrap: wrap;
@@ -65,7 +67,7 @@ nav a:hover {
   color: var(--text);
 }
 
-/* ===== Article List ===== */
+/* Artcile list */
 .article-list {
   max-width: var(--max-width);
   margin: 1.5rem auto;
@@ -78,7 +80,7 @@ nav a:hover {
   text-transform: capitalize;
 }
 
-/* ===== Sorting ===== */
+/* Sorting component */
 .sorting {
   display: flex;
   align-items: center;
@@ -97,7 +99,7 @@ nav a:hover {
   font-size: 0.85rem;
 }
 
-/* ===== Article Grid & Cards ===== */
+/* Article placement grid & individual article cards */
 .article-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -138,7 +140,7 @@ nav a:hover {
   color: var(--accent);
 }
 
-/* ===== Single Article ===== */
+/* Single article cards */
 .single-article {
   max-width: 720px;
   margin: 1.5rem auto;
@@ -184,7 +186,7 @@ nav a:hover {
   color: var(--muted);
 }
 
-/* ===== Votes ===== */
+/* Voting controls */
 .vote-controls {
   display: flex;
   align-items: center;
@@ -204,7 +206,7 @@ nav a:hover {
   border-color: var(--accent);
 }
 
-/* ===== Comments ===== */
+/* Comment functionlity */
 .comment-card {
   background: var(--card);
   padding: 1rem;
