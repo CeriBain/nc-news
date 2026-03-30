@@ -203,3 +203,36 @@ nav a:hover {
   color: var(--accent);
   border-color: var(--accent);
 }
+
+/* ===== Comments ===== */
+.comment-card {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 0.6rem;
+}
+.comment-card .comment-author {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #4a69bd;
+  margin-bottom: 0.25rem;
+}
+.add-comment textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  resize: vertical;
+  margin-bottom: 0.5rem;
+}
+.add-comment button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
