@@ -183,3 +183,23 @@ nav a:hover {
   font-size: 0.85rem;
   color: var(--muted);
 }
+
+/* ===== Votes ===== */
+.vote-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.vote-controls button {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  color: var(--muted);
+}
+.vote-controls button:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
