@@ -8,3 +8,21 @@
   --radius: 6px;
   --max-width: 960px;
 }
+
+body {
+  font-family: "Segoe UI", -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
