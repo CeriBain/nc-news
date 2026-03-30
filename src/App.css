@@ -64,3 +64,35 @@ nav a:hover {
   background: var(--bg);
   color: var(--text);
 }
+
+/* ===== Article List ===== */
+.article-list {
+  max-width: var(--max-width);
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}
+.article-list h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  text-transform: capitalize;
+}
+
+/* ===== Sorting ===== */
+.sorting {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  background: var(--card);
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.sorting select {
+  padding: 0.35rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
