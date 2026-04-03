@@ -48,9 +48,9 @@ export function postComment(article_id, username, body) {
 }
 export function patchArticleVotes(article_id, inc_votes) {
   return fetch(`${baseProjectUrl}/articles/${article_id}`, {
-    method: "PATCH", // updating
+    method: "PATCH", 
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ inc_votes }), // converts inc_votes from an object to a string
+    body: JSON.stringify({ inc_votes }), 
   })
     .then((res) => {
       return res.json();

@@ -7,7 +7,7 @@ import Sorting from "./Sorting";
 
 function ArticleList() {
   const { topic } = useParams();
-  const [searchParams, setSearchParams] = useSearchParams(); // stores in URL not memory
+  const [searchParams, setSearchParams] = useSearchParams(); 
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
