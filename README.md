@@ -2,9 +2,9 @@
 
 A React-based news app where users can browse articles by topic, vote on content, and join the discussion through comments. 
 
-## Live Demo
+## Live Demo 
 
-🔗 [Hosted version](https://<your-hosted-url>.netlify.app)   (update this!!!)
+🔗 https://nc-news-deployed.netlify.app/
 
 ## Built With
 
